@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="teslaSolutions">
 
-<head>
+<head ng-controller="mainController">
 	<meta name="description" content="Tesla Solutions -- Green Energy Solutions for the San Francisco Bay Area" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Tesla Solutions - Green Energy Solutions for the San Francisco Bay Area</title>
@@ -9,17 +9,17 @@
 	<link rel="stylesheet" href="style-mobile.css" media="only screen and (max-width: 909px)" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<script src="jquery-2.2.4.min.js" type="text/javascript"></script>
+	<script src="jquery.touchwipe.1.1.1.js" type="text/javascript"></script>
 	<script src="angular.js" type="text/javascript"></script>
 	<script src="angular-ui-router.js"></script>
 	<script src="aaap.js" type="text/javascript"></script>
 	<script src="test/testController.js" type="text/javascript"></script>
-	<script src="main/mainController.js" type="text/javascript"></script>
-
+	<script src="main/mainController.js?faker=faker" type="text/javascript"></script>
 
 
 </head>
 
-<body ng-app="teslaSolutions">
+<body>
 	<div class="mainContainer" ng-controller="mainController">
 		<div class="logoContainer">
 			<img class="logo" src="tesla_logo.png" ng-click="go($event,'about')"/>
@@ -86,25 +86,31 @@
 
 				</div>
 				<div class="regularLinkMobile" ng-click="navMobile('about')">
-					About Us
+					-->About Us
 				</div>
 				<div class="regularLinkMobile">
-					Our Services
+					Our Services 
 				</div>
 				<div class="regularLinkMobile" ng-click="navMobile('lighting')">
-					-Lighting/LED
+					-->Lighting/LED
 				</div>
 				<div class="regularLinkMobile" ng-click="navMobile('electrical_upgrades')">
-					-Electrical Upgrades
+					-->Electrical Upgrades
 				</div>
 				<div class="regularLinkMobile" ng-click="navMobile('electrical_design')">
-					-Electric Design and Installation
+					-->Electric Design and Installation
+				</div>
+				<div class="regularLinkMobile" ng-click="navMobile('recessed_lights')">
+					-->Recessed Lights
 				</div>
 				<div class="regularLinkMobile" ng-click="navMobile('portfolio')">
 					Portfolio
 				</div>
 				<div class="regularLinkMobile" ng-click="navMobile('rebates')">
-					Incentives / Rebates
+					Residential Rebates
+				</div>
+				<div class="regularLinkMobile" ng-click="navMobile('business_rebates')">
+					Commercial Rebates
 				</div>
 				<div class="regularLinkMobile" ng-click="navMobile('contact')">
 					Contact

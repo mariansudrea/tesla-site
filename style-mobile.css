@@ -1,7 +1,6 @@
 /*	MOBILE / SMALL SCREEN STYLESHEET 	*/
 body
 {
-
 }
 .mainContainter
 {
@@ -47,6 +46,7 @@ margin:0 0 10px;
 font-size:1em;
 line-height:1em;
 transition: all 0.5s;
+-webkit-transition: all 0.5s;
 -webkit-box-shadow: 0px -3px 19px 0px rgba(50, 50, 50, 1);
 -moz-box-shadow:    0px -3px 19px 0px rgba(50, 50, 50, 1);
 box-shadow:         0px -3px 19px 0px rgba(50, 50, 50, 1);
@@ -115,6 +115,7 @@ width:90%;
 margin-left:5%;
 line-height:59px;
 border-top:1px solid black;
+z-index:-1;
 }
 .textPc
 {
@@ -320,22 +321,24 @@ display:none;
 .sliderMobile
 {
 width:100%;
-background-color:blue;
+/*background-color:blue;*/
 position:relative;
 float:left;
 overflow:hidden;
+z-index:10;
 }
 .slideContainer
 {
 position:relative;
 float:left;
-width:200%;
-transition: all 2s;
+transition: all 0.7s;
+-webkit-transition: all 0.7s;
 }
 .sliderImage
 {
 position:relative;
 float:left;
+width:25%;
 }
 .textSlider
 {
@@ -363,4 +366,7 @@ font-family: 'Roboto', sans-serif;
 font-weight:300;
 letter-spacing:1px;
 }
-
+.pc
+{
+display:none;
+}

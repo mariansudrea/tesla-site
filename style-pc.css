@@ -493,4 +493,7 @@ transition:all 0.5s;
 {
 display:none;
 }
-
+.mobile
+{
+display:none;
+}
