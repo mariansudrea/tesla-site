@@ -1,5 +1,6 @@
 app.controller('mainController', ['$rootScope','$log','$interval','$http','$scope','$state', function($rootScope,$log,$interval,$http,$scope,$state){
 	$rootScope.sliderStyle = {		"width":			"3600px",
+									"background-color": "white",
 									"margin-left":			$rootScope.sliderPosition + "px"};
 	console.log($rootScope.sliderStyle);
 	if (!$rootScope.sliderInterval){
@@ -22,6 +23,9 @@ app.controller('mainController', ['$rootScope','$log','$interval','$http','$scop
 		};
 /// TOUCHSTART REGISTERED ! NOW TO MAKE WORK.. NVM, just do Mouse events.
 	$scope.$on('$viewContentLoaded', function() {
+		setTimeout(function(){
+			$('#loadingCover').css('display','none');
+		}, 400);
 		$('.sliderImage').on('touchstart', function(e){
 			$scope.beginSwipeX = parseInt(e.originalEvent.touches[0]['pageX'] );
 			$scope.beginSwipeTime = Date.now();
