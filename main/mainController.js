@@ -1,6 +1,9 @@
 app.controller('mainController', ['$rootScope','$log','$interval','$http','$scope','$state', function($rootScope,$log,$interval,$http,$scope,$state){
+	$rootScope.sliderStyle = {		"width":			"3600px",
+									"margin-left":			$rootScope.sliderPosition + "px"};
+	console.log($rootScope.sliderStyle);
 	if (!$rootScope.sliderInterval){
-		$rootScope.sliderInterval = $interval(function(){/*$scope.$apply(*/$scope.slideRight()},7000);
+		$rootScope.sliderInterval = $interval(function(){/*$scope.$apply(*/$scope.slideRight()},6000);
 	}
 	$rootScope.sliderPosition = 0;
 	$rootScope.sliderPositionMobile = 0;
@@ -107,9 +110,11 @@ app.controller('mainController', ['$rootScope','$log','$interval','$http','$scop
 		if ( $rootScope.sliderInterval == null) { // restart slider on page leave
 	        $rootScope.sliderInterval = $interval(function(){/*$scope.$apply(*/$scope.slideRight()},7000);
 		}
-		jQuery(event.target).parent().css('z-index','0');
-		jQuery(event.target).parent().hover(function(){$(this).css('z-index','1')},
-										function(){$(this).css('z-index','0')});
+		if ( event != null ) {
+			jQuery(event.target).parent().css('z-index','0');
+			jQuery(event.target).parent().hover(function(){$(this).css('z-index','1')},
+											function(){$(this).css('z-index','0')});
+		}
 		$state.go(a);
 //		jQuery(event.target).parent().css('z-index','0');
 //		setTimeout(function(){jQuery(event.target).parent().css('display','block');},100);
@@ -135,7 +140,7 @@ app.controller('mainController', ['$rootScope','$log','$interval','$http','$scop
 		}
 	}
 	$scope.navMobile = function(there) {
-		$state.go(there);
+		$scope.go(null,there);
 		$scope.mobileMenuSize = 60;
 		$scope.menuStatus = "+";
 	}
@@ -160,6 +165,8 @@ app.controller('mainController', ['$rootScope','$log','$interval','$http','$scop
 		};
 		$rootScope.sliderPosition = $rootScope.sliderPosition == 0 ? -2700 : $rootScope.sliderPosition + 900;
 		$rootScope.sliderPositionMobile = ( $rootScope.sliderPositionMobile == 0 ? -300 : $rootScope.sliderPositionMobile + 100 );
+		$rootScope.sliderStyle = {		"width":			"3600px",
+									"margin-left":			$rootScope.sliderPosition + "px"};
 //		if(!clicked) {$scope.$digest()};
 		$log.log($rootScope.sliderPosition);
 		if (clicked === "yes" ) {
@@ -176,6 +183,8 @@ app.controller('mainController', ['$rootScope','$log','$interval','$http','$scop
 	//	alert('sliding right');
 		$rootScope.sliderPosition = ( $rootScope.sliderPosition == -2700 ? 0 : $rootScope.sliderPosition - 900 );
 		$rootScope.sliderPositionMobile = ( $rootScope.sliderPositionMobile == -300 ? 0 : $rootScope.sliderPositionMobile - 100 );
+		$rootScope.sliderStyle = {		"width":			"3600px",
+									"margin-left":			$rootScope.sliderPosition + "px"};
 		
 //		if(!clicked) {setTimeout(function(){$log.log('digesting');$rootScope.$digest()},2000)};
 		$log.log($rootScope.sliderPosition);

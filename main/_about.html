@@ -6,13 +6,13 @@
     		<img src="screen_1a.jpg" class="sliderImage" style="width:100%"/>
 		</div-->
 		<div class="sliderImage">
+    		<img src="slide_3_1_capture.png" class="sliderImage sep" style="width:100%" ng-click="go($event,'business_rebates')"/>
+		</div>
+		<div class="sliderImage">
     		<img src="screen_1a.jpg" class="sliderImage sep" style="width:100%"/>
 		</div>
 		<div class="sliderImage">
     		<img src="screen_2.png" class="sliderImage sep" style="width:100%" ng-click="go($event,'contact')"/>
-		</div>
-		<div class="sliderImage">
-    		<img src="slide_3_1_capture.png" class="sliderImage sep" style="width:100%" ng-click="go($event,'business_rebates')"/>
 		</div>
 		<div class="sliderImage">
     		<img src="slide_4_capture1.png" class="sliderImage sep" style="width:100%" ng-click="go($event, 'recessed_lights')"/>
@@ -37,13 +37,7 @@
 
 
 	<div class="slider">
-	  <div class="slideContainer" style="width:3600px;margin-left:{{sliderPosition}}px">
-    	<div class="sliderImage" style="background-color:yellow">
-    		<img src="screen_1a.jpg" class="sliderImage"/>
-		</div>
-		<div class="sliderImage" style="background-color:magenta">
-    		<img src="screen_2.png" class="sliderImage" style=""/>
-		</div>
+	  <div class="slideContainer" ng-style="sliderStyle" >
 		<div class="sliderImage" style="background-color:purple">
     		<img src="screen_4.png" class="sliderImage" style=""/>
 			<div class="textSlider">
@@ -59,6 +53,12 @@
 				</span>
 				
 			</div>
+		</div>
+    	<div class="sliderImage" style="background-color:yellow">
+    		<img src="screen_1a.jpg" class="sliderImage"/>
+		</div>
+		<div class="sliderImage" style="background-color:magenta">
+    		<img src="screen_2.png" class="sliderImage" style=""/>
 		</div>
 		<div class="sliderImage" style="background-color:purple">
     		<img src="screen_5.png" class="sliderImage" style=""/>
