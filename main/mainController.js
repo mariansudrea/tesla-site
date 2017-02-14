@@ -23,8 +23,14 @@ app.controller('mainController', ['$rootScope','$log','$interval','$http','$scop
 		};
 /// TOUCHSTART REGISTERED ! NOW TO MAKE WORK.. NVM, just do Mouse events.
 	$scope.$on('$viewContentLoaded', function() {
+		$(window).resize(function(){
+			$scope.iframeHeight = $('#videoMobile').css('width').split('px')[0] * 0.6;
+			$scope.$digest();
+		});
 		setTimeout(function(){
 			$('#loadingCover').css('display','none');
+			$scope.iframeHeight = $('#videoMobile').css('width').split('px')[0] * 0.6;
+			$scope.$digest();
 		}, 400);
 		$('.sliderImage').on('touchstart', function(e){
 			$scope.beginSwipeX = parseInt(e.originalEvent.touches[0]['pageX'] );
