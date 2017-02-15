@@ -372,3 +372,15 @@ letter-spacing:1px;
 {
 display:none;
 }
+#videoPc
+{display:none}
+#videoMobile
+{
+margin-left:10%;
+margin-top:30px;
+}
+#loadingCover
+{
+transition:all 0.8s;
+-webkit-transition:all 0.8s;
+}

@@ -28,7 +28,7 @@ app.controller('mainController', ['$rootScope','$log','$interval','$http','$scop
 			$scope.$digest();
 		});
 		setTimeout(function(){
-			$('#loadingCover').css('display','none');
+			$('#loadingCover').css('opacity','0');
 			$scope.iframeHeight = $('#videoMobile').css('width').split('px')[0] * 0.6;
 			$scope.$digest();
 		}, 400);

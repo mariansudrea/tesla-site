@@ -500,3 +500,20 @@ display:none;
 {
 display:none;
 }
+#videoPc
+{
+width:500px;
+height:300px;
+margin-left:200px;
+float:left;
+position:relative;
+}
+#videoMobile
+{
+display:none;
+}
+#loadingCover
+{
+transition: all 0.8s;
+-webkit-transition: all 0.8s;
+}
